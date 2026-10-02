@@ -1,0 +1,40 @@
+#intro
+git config
+git config --global user.name ""
+"     "        "       user.email ""
+"       '         '    init.defaultBranch main
+git level of configuration:
+ git config --global  (all user on the system)
+ git config --system  (current user)
+ git config --local  (current repository)
+git status
+
+#staging
+git add <file> - Stage a file
+git add --all or git add -A - Stage all changes
+git restore --staged <file> - Unstage a file
+
+#commit
+git commit -m "message" - Commit staged changes with a message
+git commit -a -m "message" - Commit all tracked changes (skip staging)
+git log - See commit history
+
+#tagging
+https://www.w3schools.com/git/git_tagging.asp?remote=gitlab
+git tag <tagname> [commit_hash] - tag specific tag
+git tag -a <tagname> -m <meassage> - annotated tag
+
+#proper tagging steps:(commit after tagging)
+1, git add .
+2, git commit -m message
+3, git tag -a v1.2 -m release version
+
+# file removal
+git rm  -r - folder removal
+git  rm -f - force to removal
+git rm  -q - quite delete without verbrose
+
+#push ,pull and fetch
+push =  send local changes to the remote
+fetch = bring remote changes into local repository but not mergingt them yet
+pull = FETCH + MERGE, current working direchtory immediately reflects the remote changes
